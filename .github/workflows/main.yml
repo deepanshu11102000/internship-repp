@@ -36,3 +36,20 @@ jobs:
           context: .
           push: true
           tags: deepanshu11130/nodejs-demo-app:latest
+
+  deploy-to-ec2:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to AWS EC2
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            docker pull deepanshu11130/nodejs-demo-app:latest
+            docker stop nodejs-app || true
+            docker rm nodejs-app || true
+            docker run -d --restart unless-stopped -p 3000:3000 --name nodejs-app deepanshu11130/nodejs-demo-app:latest
