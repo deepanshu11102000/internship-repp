@@ -1,4 +1,4 @@
-# Node.js CI/CD Pipeline using GitHub Actions
+<img width="2908" height="1756" alt="image" src="https://github.com/user-attachments/assets/14968f5c-eb09-4e88-b594-bd6c4f188a62" /># Node.js CI/CD Pipeline using GitHub Actions
 
 ## Project Overview
 This project demonstrates automated CI/CD deployment of a Node.js application using GitHub Actions, Docker, DockerHub, and AWS EC2.
@@ -31,3 +31,7 @@ The application is deployed on AWS EC2 using Docker on port 3000.
 
 ## Result
 Successfully implemented an automated CI/CD pipeline using GitHub Actions with Docker image deployment to AWS EC2.
+
+## Please find the links below for the project repository, CI/CD pipeline, DockerHub image, AWS EC2 instance, and live application.
+
+## The GitHub repository link is provided as the main submission link. Additional links are included for reference and verification.
